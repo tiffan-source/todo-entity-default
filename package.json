@@ -28,12 +28,12 @@
    "main": "dist/src/index.js",
    "types": "dist/src/index.d.ts",
    "exports": {
-       ".": {
-           "import": "./dist/src/index.js",
-           "types": "./dist/src/index.d.ts"
-       }
+      ".": {
+         "import": "./dist/src/index.js",
+         "types": "./dist/src/index.d.ts"
+      }
    },
-  "author": "tiffan-source",
+   "author": "tiffan-source",
    "license": "GNU",
    "devDependencies": {
       "@commitlint/cli": "^19.8.1",
