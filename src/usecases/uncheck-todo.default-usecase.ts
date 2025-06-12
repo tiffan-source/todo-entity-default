@@ -5,7 +5,16 @@ import {
    type UncheckTodoUseCase,
 } from "todo-entity";
 
+/**
+ * Default implementation of the UncheckTodoUseCase.
+ * This use case is responsible for marking a todo item as not completed.
+ */
 export class UncheckTodoDefaultUseCase implements UncheckTodoUseCase {
+   /**
+    * Marks a todo item as not completed.
+    * @param params - The parameters containing the todo to be unchecked.
+    * @returns A new TodoEntity with the completed status set to false.
+    */
    uncheckTodo(params: UncheckTodoParams): UncheckTodoResponse {
       return new TodoEntity(
          params.todo.getId(),

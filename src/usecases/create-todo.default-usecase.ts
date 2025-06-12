@@ -8,8 +8,22 @@ import {
 } from "todo-entity";
 import { v7 } from "uuid";
 
+/**
+ * Default implementation of the CreateTodoUseCase.
+ * This use case is responsible for creating a new todo item.
+ */
 export class CreateTodoDefaultUsecase implements CreateTodoUseCase {
+   /**
+    * Constructor for CreateTodoDefaultUsecase.
+    * @param createLabelUseCase - An instance of CreateLabelUseCase to handle label creation.
+    */
    constructor(private readonly createLabelUseCase: CreateLabelUseCase) {}
+
+   /**
+    * Creates a new todo item.
+    * @param params - The parameters containing the details of the todo to be created.
+    * @returns A new TodoEntity with the generated UUID and current timestamps.
+    */
    createTodo(params: CreateTodoParams): CreateTodoResponse {
       let labels: LabelEntity[] | undefined;
 
