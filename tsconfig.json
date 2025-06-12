@@ -7,7 +7,7 @@
       "allowJs": false,
       // "resolveJsonModule": true,
       "moduleDetection": "force",
-      "isolatedModules": true,
+      // "isolatedModules": true,
       "verbatimModuleSyntax": true,
 
       /* Strictness */
@@ -37,12 +37,7 @@
       /* If your code doesn't run in the DOM: */
       "lib": ["es2022"],
       "moduleResolution": "bundler"
-
    },
-   "include": [
-      "src/**/*.ts",
-   ],
-   "exclude": [
-      "tests/**/*.ts",
-   ]
+   "include": ["src/**/*.ts"],
+   "exclude": ["tests/**/*.ts"]
 }

@@ -1,13 +1,13 @@
 {
-   "name": "ts-template",
+   "name": "todo-entity-default",
    "version": "1.0.0",
-   "description": "A simple TypeScript template for Node.js projects",
+   "description": "A simple implementation of a todo entity in TypeScript.",
    "type": "module",
    "repository": {
       "type": "git",
       "url": "https://github.com/tiffan-source/my-ts-startup.git"
    },
-   "main": "index.js",
+   "homepage": "https://github.com/tiffan-source/my-ts-startup.git",
    "scripts": {
       "lint": "npx eslint --fix",
       "format": "npx prettier --write .",
@@ -21,13 +21,20 @@
       "start": "node dist/src/index.js"
    },
    "keywords": [
-      "typescript",
-      "node",
-      "template",
-      "starter"
+      "todo",
+      "entity",
+      "implementation"
    ],
-   "author": "blackgenius",
-   "license": "ISC",
+   "main": "dist/src/index.js",
+   "types": "dist/src/index.d.ts",
+   "exports": {
+       ".": {
+           "import": "./dist/src/index.js",
+           "types": "./dist/src/index.d.ts"
+       }
+   },
+  "author": "tiffan-source",
+   "license": "GNU",
    "devDependencies": {
       "@commitlint/cli": "^19.8.1",
       "@commitlint/config-conventional": "^19.8.1",
