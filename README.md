@@ -25,11 +25,12 @@ Il rend ainsi les entités et cas d’usage exploitables dans une application r�
 ```bash
 todo-entity-default/
 ├── src/
-│ ├── usecases/ # Implémentations des cas d’usage
+│ ├── entities/ # Implémentations des interfaces d'entités
+│ ├── factories/ # Usines pour créer des instances d'entités
 │ └── index.ts # Point d’entrée du module
 ├── tests/
-│ ├── mocks/ # Données simulées (mock)
-│ └── usecases/ # Tests des use cases
+│ ├── entities/ # Tests des entités
+│ └── factories/ # Tests des usines
 ├── README.md # Ce fichier
 ├── tsconfig.json # Config TypeScript
 ├── eslint.config.mjs # Config ESLint
@@ -42,25 +43,6 @@ todo-entity-default/
 
 ```bash
 npm install todo-entity-default
-```
-
----
-
-## 🛠️ Utilisation
-
-```typescript
-import { CreateTodoDefaulUseCase, CreateLabelDefaultUseCase } from 'todo-entity-default';
-
-const createLabel = new CreateLabelDefaultUseCase();
-
-const createTodo = new CreateTodoDefaulUseCase(createLabel);
-
-const todo = createTodo.execute({
-  title: 'Nouvelle tâche',
-  description: 'Description de la tâche',
-  dueDate: new Date(),
-});
-console.log(todo);
 ```
 
 ---

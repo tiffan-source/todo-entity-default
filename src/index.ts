@@ -1,1 +1,2 @@
-export * from "./usecases/add-label-to-todo.default-usecase";
+export * from "./entities/index.js";
+export * from "./factories/index.js";

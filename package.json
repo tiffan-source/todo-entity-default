@@ -1,13 +1,13 @@
 {
    "name": "todo-entity-default",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "description": "A simple implementation of a todo entity in TypeScript.",
    "type": "module",
    "repository": {
       "type": "git",
-      "url": "https://github.com/tiffan-source/my-ts-startup.git"
+      "url": "https://github.com/tiffan-source/todo-entity-default.git"
    },
-   "homepage": "https://github.com/tiffan-source/my-ts-startup.git",
+   "homepage": "https://github.com/tiffan-source/todo-entity-default.git",
    "scripts": {
       "lint": "npx eslint --fix",
       "format": "npx prettier --write .",
@@ -59,7 +59,7 @@
       ]
    },
    "dependencies": {
-      "todo-entity": "1.0.5",
+      "todo-entity": "^1.1.1",
       "uuid": "^11.1.0"
    }
 }
