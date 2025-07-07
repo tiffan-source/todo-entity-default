@@ -10,8 +10,8 @@ export class Todo implements ITodo {
    private dueDate?: Date;
    private labels: Label[] = [];
 
-   constructor(title: string) {
-      this.id = v7();
+   constructor(title: string, id?: string) {
+      this.id = id ?? v7();
       this.title = title;
    }
 

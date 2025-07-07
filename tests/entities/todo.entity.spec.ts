@@ -97,4 +97,11 @@ describe("Todo Entity", () => {
    it("should return an empty array if no labels are added", () => {
       expect(todo.getLabels()).toEqual([]);
    });
+
+   it("should allow creating a todo with a specific ID", () => {
+      const customId = "custom-id-123";
+      const customTodo = new Todo("Custom Todo", customId);
+      expect(customTodo.getId()).toBe(customId);
+      expect(customTodo.getTitle()).toBe("Custom Todo");
+   });
 });
