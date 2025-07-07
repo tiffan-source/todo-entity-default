@@ -1,6 +1,6 @@
 {
    "name": "todo-entity-default",
-   "version": "1.1.0",
+   "version": "1.1.1",
    "description": "A simple implementation of a todo entity in TypeScript.",
    "type": "module",
    "repository": {
@@ -22,7 +22,6 @@
       "changeset": "npx changeset",
       "version": "changeset version",
       "release": "changeset publish"
-
    },
    "keywords": [
       "todo",
