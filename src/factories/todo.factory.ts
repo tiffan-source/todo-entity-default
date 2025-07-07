@@ -5,4 +5,8 @@ export class TodoFactory implements ITodoFactory {
    create(title: string): Todo {
       return new Todo(title);
    }
+
+   createWithId(id: string, title: string) {
+      return new Todo(title, id);
+   }
 }

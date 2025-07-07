@@ -59,7 +59,7 @@
       ]
    },
    "dependencies": {
-      "todo-entity": "^1.1.1",
+      "todo-entity": "^2.0.0",
       "uuid": "^11.1.0"
    }
 }
