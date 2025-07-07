@@ -18,7 +18,11 @@
       "test:debug": "npm run test -- --runInBand --detectOpenHandles --forceExit",
       "prepare": "husky",
       "build": "npx tsc",
-      "start": "node dist/src/index.js"
+      "start": "node dist/src/index.js",
+      "changeset": "npx changeset",
+      "version": "changeset version",
+      "release": "changeset publish"
+
    },
    "keywords": [
       "todo",
@@ -59,6 +63,7 @@
       ]
    },
    "dependencies": {
+      "@changesets/cli": "^2.29.5",
       "todo-entity": "^2.0.0",
       "uuid": "^11.1.0"
    }
