@@ -6,8 +6,8 @@ export class Label implements ILabel {
    private color: string = "";
    private id: string;
 
-   constructor(name: string) {
-      this.id = v7();
+   constructor(name: string, id?: string) {
+      this.id = id ?? v7();
       this.name = name;
    }
 
