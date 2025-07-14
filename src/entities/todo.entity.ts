@@ -20,9 +20,9 @@ export class Todo implements ITodo {
       return this.description;
    }
 
-   public accomplish(): boolean {
+   public accomplish(doneDate?: Date): boolean {
       if (!this.doneDate) {
-         this.doneDate = new Date();
+         this.doneDate = doneDate ?? new Date();
          return true;
       }
       return false;

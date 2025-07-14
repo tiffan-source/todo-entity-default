@@ -104,4 +104,10 @@ describe("Todo Entity", () => {
       expect(customTodo.getId()).toBe(customId);
       expect(customTodo.getTitle()).toBe("Custom Todo");
    });
+
+   it("should accomplish a todo with a specific done Date", () => {
+      const doneDate = new Date("2023-01-01");
+      todo.accomplish(doneDate);
+      expect(todo.getDoneDate()).toEqual(doneDate);
+   });
 });
