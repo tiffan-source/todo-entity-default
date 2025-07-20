@@ -110,4 +110,23 @@ describe("Todo Entity", () => {
       todo.accomplish(doneDate);
       expect(todo.getDoneDate()).toEqual(doneDate);
    });
+
+   it("should modify the title of the todo", () => {
+      const newTitle = "Updated Todo Title";
+      const result = todo.modifyTitle(newTitle);
+      expect(result).toBe(true);
+      expect(todo.getTitle()).toBe(newTitle);
+   });
+
+   it("should not modify the title if the new title is empty", () => {
+      const result = todo.modifyTitle("");
+      expect(result).toBe(false);
+      expect(todo.getTitle()).toBe("Test Todo");
+   });
+
+   it("should not modify the title if the new title is just whitespace", () => {
+      const result = todo.modifyTitle("   ");
+      expect(result).toBe(false);
+      expect(todo.getTitle()).toBe("Test Todo");
+   });
 });

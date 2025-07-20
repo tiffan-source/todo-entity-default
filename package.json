@@ -63,7 +63,7 @@
    },
    "dependencies": {
       "@changesets/cli": "^2.29.5",
-      "todo-entity": "^2.0.0",
+      "todo-entity": "^2.3.0",
       "uuid": "^11.1.0"
    }
 }

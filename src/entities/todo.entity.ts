@@ -66,6 +66,14 @@ export class Todo implements ITodo {
       return this.dueDate;
    }
 
+   public modifyTitle(title: string): boolean {
+      if (title && title.trim().length > 0) {
+         this.title = title;
+         return true;
+      }
+      return false;
+   }
+
    public addLabel(label: Label): number {
       return this.labels.push(label);
    }
