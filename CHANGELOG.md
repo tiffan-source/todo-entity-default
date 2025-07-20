@@ -1,5 +1,11 @@
 # todo-entity-default
 
+## 1.4.0
+
+### Minor Changes
+
+- 24dd4e1: implement todo title modification
+
 ## 1.3.0
 
 ### Minor Changes
