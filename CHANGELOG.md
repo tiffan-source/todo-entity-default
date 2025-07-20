@@ -1,5 +1,11 @@
 # todo-entity-default
 
+## 1.3.0
+
+### Minor Changes
+
+- 2d4ab10: implement accomplish on todo entity with optional done date
+
 ## 1.2.0
 
 ### Minor Changes
