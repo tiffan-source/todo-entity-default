@@ -78,6 +78,14 @@ export class Todo implements ITodo {
       return this.labels.push(label);
    }
 
+   public removeLabel(label: Label): number {
+      const index = this.labels.findIndex((l) => l.getId() === label.getId());
+      if (index !== -1) {
+         this.labels.splice(index, 1);
+      }
+      return this.labels.length;
+   }
+
    public getLabels(): Label[] {
       return this.labels;
    }

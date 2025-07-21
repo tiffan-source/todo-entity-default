@@ -129,4 +129,46 @@ describe("Todo Entity", () => {
       expect(result).toBe(false);
       expect(todo.getTitle()).toBe("Test Todo");
    });
+
+   it("should remove a label from the todo", () => {
+      const label1 = new Label("label1");
+      const label2 = new Label("label2");
+
+      todo.addLabel(label1);
+      todo.addLabel(label2);
+
+      expect(todo.getLabels().length).toBe(2);
+
+      const removedCount = todo.removeLabel(label1);
+      expect(removedCount).toBe(1);
+      expect(todo.getLabels()).toContain(label2);
+      expect(todo.getLabels()).not.toContain(label1);
+   });
+
+   it("should not remove a label that does not exist", () => {
+      const label1 = new Label("label1");
+      const label2 = new Label("label2");
+
+      todo.addLabel(label1);
+
+      expect(todo.getLabels().length).toBe(1);
+
+      const removedCount = todo.removeLabel(label2);
+      expect(removedCount).toBe(1); // Should still return the count of labels
+      expect(todo.getLabels()).toContain(label1);
+   });
+
+   it("should return the correct number of labels after removing one", () => {
+      const label1 = new Label("label1");
+      const label2 = new Label("label2");
+
+      todo.addLabel(label1);
+      todo.addLabel(label2);
+
+      expect(todo.getLabels().length).toBe(2);
+
+      todo.removeLabel(label1);
+      expect(todo.getLabels().length).toBe(1);
+      expect(todo.getLabels()).toContain(label2);
+   });
 });
