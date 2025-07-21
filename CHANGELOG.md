@@ -1,5 +1,11 @@
 # todo-entity-default
 
+## 1.5.0
+
+### Minor Changes
+
+- f5d1c89: implement removeLabel
+
 ## 1.4.0
 
 ### Minor Changes
